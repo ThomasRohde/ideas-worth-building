@@ -1,0 +1,84 @@
+name: Repository governance or design change
+description: Propose a focused change to principles, governance, schema, curation, or repository mechanics
+title: ""
+labels:
+  - "type:governance"
+  - "status:spark"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Change the process only for a reason
+
+        Use this form for repository-level changes. Prefer the smallest rule or mechanism that addresses an observed failure. Material changes normally require a decision record under `decisions/`.
+
+  - type: checkboxes
+    id: search
+    attributes:
+      label: Search and context
+      options:
+        - label: I searched open and closed Issues and reviewed the relevant principles, governance, schema, and decision records.
+          required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: State the smallest concrete change to repository policy, structure, schema, workflow, or tooling.
+      placeholder: Change ... so that ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed-failure
+    attributes:
+      label: Observed failure or new constraint
+      description: What happened, or what changed, that makes this worth considering? A hypothetical risk is acceptable when clearly labelled.
+      placeholder: We observed... / A new GitHub constraint means... / Hypothesis...
+    validations:
+      required: true
+
+  - type: textarea
+    id: principles
+    attributes:
+      label: Principles affected
+      description: Explain how the change supports, modifies, or conflicts with the repository principles.
+      placeholder: This supports... It creates tension with...
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and the option to do nothing
+      description: Include a lighter response when one exists. Do not add process simply because it can be automated.
+      placeholder: Alternatives considered...
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences and failure modes
+      description: Cover contributor burden, agent behaviour, curation quality, portability, security, moderation, and reversibility where material.
+      placeholder: Benefits, costs, risks, and how the change could be reversed...
+
+  - type: textarea
+    id: decision-record
+    attributes:
+      label: Decision-record impact
+      description: Identify the decision record to add, amend, or supersede if this change is accepted.
+      placeholder: New record / amend NNNN / no durable decision record needed because...
+
+  - type: textarea
+    id: agent-assistance
+    attributes:
+      label: AI or agent assistance
+      description: Required when an agent materially researched, reasoned, synthesized, or drafted this Issue.
+      placeholder: "Agent/tool; model; external research yes/no; human reviewed yes/no; remaining uncertainties"
+
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: Contribution integrity
+      options:
+        - label: I have separated observed failures from hypothetical risks and have not invented evidence to justify more process.
+          required: true
+        - label: I will follow the Code of Conduct and understand that this public contribution is licensed under the repository terms.
+          required: true

@@ -1,0 +1,34 @@
+Ideas Worth Building — licensing notice
+
+1. CONTENT LICENSE
+
+Unless a file states otherwise, prose, proposal text, idea documentation, research notes,
+patterns, principles, decision records, Issue templates, and other non-software content in
+this repository are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0).
+
+The full text is in LICENSES/CC-BY-4.0.txt.
+SPDX-License-Identifier: CC-BY-4.0
+
+2. SOFTWARE LICENSE
+
+Software, scripts, tests, and automation in scripts/, tests/, and .github/workflows/ are
+licensed under the MIT License.
+
+The full text is in LICENSES/MIT.txt.
+SPDX-License-Identifier: MIT
+
+3. CONTRIBUTIONS
+
+By contributing through repository files, Issues, comments, or pull requests, you agree
+that your contribution is made under the applicable license above unless an authorized
+maintainer agrees in writing to a different license before submission.
+
+4. IMPORTANT LIMITS
+
+These licenses cover copyright and similar rights in the contributed expression. They do
+not certify that an underlying idea is novel, safe, viable, non-infringing, patent-free,
+or free of other third-party rights. No patent, trademark, privacy, publicity, or
+confidentiality rights are granted except as explicitly required by the applicable license.
+
+THE MATERIAL IS PROVIDED WITHOUT WARRANTY TO THE EXTENT PERMITTED BY LAW.

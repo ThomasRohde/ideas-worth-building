@@ -1,0 +1,147 @@
+[
+  {
+    "name": "type:proposal",
+    "color": "5319E7",
+    "description": "A project idea being explored and refined"
+  },
+  {
+    "name": "type:problem",
+    "color": "D73A4A",
+    "description": "A standalone problem, frustration, tension, or observation"
+  },
+  {
+    "name": "type:governance",
+    "color": "0E8A16",
+    "description": "Repository principles, policy, schema, or decision rights"
+  },
+  {
+    "name": "status:spark",
+    "color": "FBCA04",
+    "description": "Newly captured; incomplete is acceptable"
+  },
+  {
+    "name": "status:exploring",
+    "color": "BFD4F2",
+    "description": "Shaping proposition, boundaries, relationships, and alternatives"
+  },
+  {
+    "name": "status:grounding",
+    "color": "2EA44F",
+    "description": "Testing claims, beneficiaries, behaviour, evidence, and assumptions"
+  },
+  {
+    "name": "status:candidate",
+    "color": "1D76DB",
+    "description": "Human curator has invited focused promotion review"
+  },
+  {
+    "name": "status:experimenting",
+    "color": "D876E3",
+    "description": "A meaningful experiment or prototype is producing information"
+  },
+  {
+    "name": "status:promoted",
+    "color": "006B75",
+    "description": "Human-approved proposal is captured under ideas/"
+  },
+  {
+    "name": "status:dormant",
+    "color": "C5DEF5",
+    "description": "Paused but potentially valuable and open to revival"
+  },
+  {
+    "name": "status:archived",
+    "color": "6E7781",
+    "description": "Active inquiry closed by a human with a recorded reason"
+  },
+  {
+    "name": "origin:problem",
+    "color": "F9D0C4",
+    "description": "Began with a problem or frustration"
+  },
+  {
+    "name": "origin:capability",
+    "color": "D4C5F9",
+    "description": "Began with a new or newly accessible capability"
+  },
+  {
+    "name": "origin:experience",
+    "color": "C2E0C6",
+    "description": "Began with a desired experience or quality"
+  },
+  {
+    "name": "origin:observation",
+    "color": "FEF2C0",
+    "description": "Began with an observation, anomaly, or emerging pattern"
+  },
+  {
+    "name": "origin:prototype",
+    "color": "BFDADC",
+    "description": "Began with a prototype or experiment"
+  },
+  {
+    "name": "origin:combination",
+    "color": "FAD8C7",
+    "description": "Value lies in combining existing concepts"
+  },
+  {
+    "name": "origin:unknown",
+    "color": "EDEDED",
+    "description": "Origin is unclear or not yet useful to classify"
+  },
+  {
+    "name": "needs:duplicate-review",
+    "color": "D4C5F9",
+    "description": "Needs comparison with related open and closed Issues"
+  },
+  {
+    "name": "needs:research",
+    "color": "BFDADC",
+    "description": "Needs decision-relevant research or source verification"
+  },
+  {
+    "name": "needs:critique",
+    "color": "F9D0C4",
+    "description": "Needs a strong counterargument or failure analysis"
+  },
+  {
+    "name": "needs:experiment",
+    "color": "FEF2C0",
+    "description": "Needs a smaller meaningful test or prototype"
+  },
+  {
+    "name": "needs:design-judgment",
+    "color": "C2E0C6",
+    "description": "Needs clarity on what excellent execution would require"
+  },
+  {
+    "name": "needs:synthesis",
+    "color": "C5DEF5",
+    "description": "Issue body needs synthesis of accumulated contributions"
+  },
+  {
+    "name": "needs:domain-knowledge",
+    "color": "BFD4F2",
+    "description": "Needs informed contribution from a relevant domain"
+  },
+  {
+    "name": "recommend:candidate",
+    "color": "84B6EB",
+    "description": "Advisory recommendation for human candidate review"
+  },
+  {
+    "name": "recommend:promotion",
+    "color": "0E8A16",
+    "description": "Advisory recommendation for human promotion review"
+  },
+  {
+    "name": "recommend:dormancy",
+    "color": "C5DEF5",
+    "description": "Advisory recommendation to pause active work"
+  },
+  {
+    "name": "recommend:archive",
+    "color": "D93F0B",
+    "description": "Advisory recommendation for human archival review"
+  }
+]

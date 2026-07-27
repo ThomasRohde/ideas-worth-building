@@ -1,0 +1,98 @@
+name: Problem or observation
+description: Capture something worth understanding without proposing a response
+title: ""
+labels:
+  - "type:problem"
+  - "status:spark"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## A response is not required
+
+        Use this form for a problem, frustration, tension, anomaly, or observation that deserves shared attention even when no project idea follows yet.
+
+        Do not force a solution, user persona, severity claim, or market narrative. A later proposal may link here, but does not have to.
+
+  - type: checkboxes
+    id: duplicate-search
+    attributes:
+      label: Search first
+      options:
+        - label: I searched open and closed Issues for the same or closely related observation.
+          required: true
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: The problem, frustration, tension, or observation
+      description: Describe what you noticed as directly as possible. Separate direct observation from interpretation.
+      placeholder: I observed... / A recurring frustration is... / There is a tension between...
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected
+    attributes:
+      label: Who or what appears to be affected
+      description: Unknown is acceptable. Avoid inventing prevalence or personas.
+      placeholder: People, communities, systems, practices, institutions, ecosystems, or “unknown”...
+
+  - type: textarea
+    id: current-response
+    attributes:
+      label: Current responses and workarounds
+      description: What happens today, including deliberate acceptance, avoidance, manual work, or competing priorities?
+      placeholder: Current behaviour or “not yet known”...
+
+  - type: textarea
+    id: why-investigate
+    attributes:
+      label: Why it may be worth understanding
+      description: This need not be financial or commercial. It may concern harm, friction, beauty, autonomy, insight, resilience, or another form of value.
+      placeholder: It may matter because...
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, assumptions, and speculation
+      description: Cite externally verifiable claims and clearly label interpretations or hypotheses.
+      placeholder: "Facts/evidence: ...\nAssumptions: ...\nSpeculation: ..."
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Issues or prior work
+      placeholder: Closest Issues, products, research, practices, or observations...
+
+  - type: dropdown
+    id: contributions
+    attributes:
+      label: Contributions currently wanted
+      multiple: true
+      options:
+        - Additional observations
+        - Counterexamples
+        - Research and source verification
+        - Domain knowledge
+        - Current alternatives and workarounds
+        - Causal analysis
+        - Connections to related proposals
+        - Synthesis
+
+  - type: textarea
+    id: agent-assistance
+    attributes:
+      label: AI or agent assistance
+      description: Required when an agent materially researched, reasoned, synthesized, or drafted this Issue.
+      placeholder: "Agent/tool; model; external research yes/no; human reviewed yes/no; remaining uncertainties"
+
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: Contribution integrity
+      options:
+        - label: I have not invented affected users, prevalence, evidence, quotations, or urgency.
+          required: true
+        - label: I will follow the Code of Conduct and understand that this public contribution is licensed under the repository terms.
+          required: true

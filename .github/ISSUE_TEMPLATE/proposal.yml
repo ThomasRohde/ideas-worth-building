@@ -1,0 +1,156 @@
+name: Proposal
+description: Capture and develop a project idea from any genuine starting point
+title: ""
+labels:
+  - "type:proposal"
+  - "status:spark"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Begin where the idea actually began
+
+        You may start with a problem, idea, capability, observation, desired experience, prototype, design principle, combination, or something whose purpose is unclear.
+
+        Only **The spark** and **The proposition** are required. `Unknown`, `untested`, and `not yet understood` are valid answers elsewhere. Do not manufacture users, evidence, pain points, or a market story to make the form look complete.
+
+  - type: checkboxes
+    id: duplicate-search
+    attributes:
+      label: Search first
+      description: Search open and closed Issues using synonyms, underlying capabilities, intended experiences, and adjacent concepts.
+      options:
+        - label: I searched open and closed Issues and will link the closest matches below when relevant.
+          required: true
+
+  - type: textarea
+    id: duplicate-review
+    attributes:
+      label: Duplicate and adjacency review
+      description: Optional but useful. Link the closest open or closed Issues and explain the distinctive delta. Similar vocabulary alone does not establish duplication.
+      placeholder: "Searches performed: ...\nClosest Issues: #...\nDistinctive delta: ..."
+
+  - type: textarea
+    id: spark
+    attributes:
+      label: The spark
+      description: What prompted this proposal? Preserve the actual origin, even when it is partial, intuitive, playful, or hard to justify yet.
+      placeholder: An observation, frustration, capability, image, prototype, experience, principle, combination, or question...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposition
+    attributes:
+      label: The proposition
+      description: What might be worth creating or exploring? State the core possibility without padding it into a pitch.
+      placeholder: It may be worth creating or exploring...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Origin
+      description: Optional. Select every origin that genuinely applies; choose unknown when classification would be artificial.
+      multiple: true
+      options:
+        - Problem or frustration
+        - New capability
+        - Desired experience
+        - Observation or emerging pattern
+        - Prototype or experiment
+        - Combination of existing concepts
+        - Unknown or not useful to classify yet
+
+  - type: textarea
+    id: beneficiaries
+    attributes:
+      label: Who or what might benefit, and why
+      description: This may be a person, community, institution, practice, ecosystem, body of knowledge, technical system, or desired experience. Unknown is acceptable at entry.
+      placeholder: Who or what could be served? What might change, and why could that matter?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current behaviours and alternatives
+      description: What happens today? Include workarounds, adjacent products, practices, deliberate non-use, or reasons the current state persists. Do not invent evidence.
+      placeholder: Known current behaviour, alternatives, precedents, or “unknown”...
+
+  - type: textarea
+    id: insight
+    attributes:
+      label: The non-obvious insight
+      description: What tension, mechanism, synthesis, or unusual point of view makes this more than an obvious feature request?
+      placeholder: The part that may not be obvious is...
+
+  - type: textarea
+    id: excellence
+    attributes:
+      label: What would make an implementation excellent
+      description: Describe qualities, interactions, constraints, craft, and taste—not only a list of features.
+      placeholder: It would need to feel, behave, protect, reveal, avoid, or enable...
+
+  - type: textarea
+    id: uncertainties
+    attributes:
+      label: Known uncertainties
+      description: State what is unknown, assumed, difficult, contested, or likely to change. Explicit uncertainty improves the proposal.
+      placeholder: We do not yet know...
+
+  - type: textarea
+    id: solutionism
+    attributes:
+      label: Risk that this is a solution looking for a problem
+      description: Consider honestly whether the capability or proposed solution is leading the reasoning. The answer may be “high,” “low,” “unclear,” or nuanced.
+      placeholder: The strongest solutionism concern is...
+
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Smallest meaningful exploration or experiment
+      description: What is the least work that could produce decision-relevant learning or reveal the intended experience? A full product is rarely the smallest useful test.
+      placeholder: To learn something material, we could...
+
+  - type: dropdown
+    id: contributions
+    attributes:
+      label: Contributions currently wanted
+      description: Optional. Select the kinds of help that would materially advance the proposal.
+      multiple: true
+      options:
+        - Duplicate and adjacency review
+        - Research and source verification
+        - Strong critique or counterexample
+        - Domain knowledge
+        - Design judgment and quality bar
+        - Technical feasibility analysis
+        - Risk, safety, privacy, or ethics analysis
+        - Experiment design
+        - Prototype or experiment results
+        - Synthesis and editing
+        - Connections to potential collaborators
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and supporting material
+      description: Link prototypes, papers, products, standards, conversations, observations, screenshots, or prior art. Identify assumptions and speculation separately.
+      placeholder: Links and concise notes on relevance...
+
+  - type: textarea
+    id: agent-assistance
+    attributes:
+      label: AI or agent assistance
+      description: Optional for wholly human contributions; required when an agent materially researched, reasoned, synthesized, or drafted this proposal.
+      placeholder: "Agent/tool; model; external research yes/no; human reviewed yes/no; remaining uncertainties"
+
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: Contribution integrity
+      options:
+        - label: I have not invented users, pain points, evidence, quotations, research, or market claims merely to complete this form.
+          required: true
+        - label: I will follow the Code of Conduct and understand that this public contribution is licensed under the repository terms.
+          required: true

@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ThomasRohde/ideas-worth-building/schemas/proposal-input.schema.json",
+  "title": "Ideas Worth Building agent proposal input",
+  "description": "Machine-oriented input for scripts/iwb.py create-proposal. Null and empty arrays are preferable to invented completeness.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "spark",
+    "proposition",
+    "origins",
+    "duplicate_search",
+    "agent_disclosure"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 180
+    },
+    "spark": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origins": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "problem",
+          "capability",
+          "experience",
+          "observation",
+          "prototype",
+          "combination",
+          "unknown"
+        ]
+      }
+    },
+    "beneficiaries": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "alternatives": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "insight": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "excellence": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "uncertainties": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "solutionism_risk": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "experiment": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "facts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "assumptions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "speculation": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "supports"],
+        "properties": {
+          "title": {"type": ["string", "null"], "minLength": 1},
+          "url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+          "supports": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "contributions_wanted": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "duplicate-review",
+          "research",
+          "critique",
+          "experiment",
+          "design-judgment",
+          "synthesis",
+          "domain-knowledge"
+        ]
+      }
+    },
+    "duplicate_search": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["queries", "reviewed_open_and_closed", "closest_issues", "distinctive_delta"],
+      "properties": {
+        "queries": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 2}
+        },
+        "reviewed_open_and_closed": {"const": true},
+        "closest_issues": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "integer", "minimum": 1}
+        },
+        "distinctive_delta": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "description": "Required by the helper when closest_issues is non-empty."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "closest_issues": {"minItems": 1}
+            }
+          },
+          "then": {
+            "properties": {
+              "distinctive_delta": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      ]
+    },
+    "related_issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["number", "relationship", "note"],
+        "properties": {
+          "number": {"type": "integer", "minimum": 1},
+          "relationship": {
+            "enum": [
+              "related-to",
+              "builds-on",
+              "contrasts-with",
+              "possible-duplicate-of",
+              "supersedes",
+              "experiment-for"
+            ]
+          },
+          "note": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "agent_disclosure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agent_tool",
+        "model",
+        "external_research_performed",
+        "human_reviewed",
+        "remaining_uncertainties"
+      ],
+      "properties": {
+        "agent_tool": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "external_research_performed": {"type": "boolean"},
+        "human_reviewed": {"type": "boolean"},
+        "remaining_uncertainties": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "origins": {"contains": {"const": "unknown"}}
+        }
+      },
+      "then": {
+        "properties": {
+          "origins": {"maxItems": 1}
+        }
+      }
+    }
+  ]
+}

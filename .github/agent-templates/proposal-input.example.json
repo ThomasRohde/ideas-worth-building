@@ -1,0 +1,37 @@
+{
+  "title": "A precise, non-promotional title",
+  "spark": "The actual observation, capability, experience, prototype, combination, or question that prompted the idea.",
+  "proposition": "What may be worth creating or exploring.",
+  "origins": ["observation"],
+  "beneficiaries": null,
+  "alternatives": null,
+  "insight": null,
+  "excellence": null,
+  "uncertainties": "Who or what would value this remains uncertain at entry.",
+  "solutionism_risk": "The proposed mechanism may be leading the reasoning.",
+  "experiment": "A bounded encounter that can reveal whether the core experience matters.",
+  "facts": [],
+  "assumptions": [],
+  "speculation": [],
+  "sources": [],
+  "contributions_wanted": ["duplicate-review", "critique"],
+  "duplicate_search": {
+    "queries": [
+      "core proposition and synonyms",
+      "underlying capability or desired experience"
+    ],
+    "reviewed_open_and_closed": true,
+    "closest_issues": [],
+    "distinctive_delta": null
+  },
+  "related_issues": [],
+  "agent_disclosure": {
+    "agent_tool": "Codex CLI",
+    "model": "not exposed",
+    "external_research_performed": false,
+    "human_reviewed": false,
+    "remaining_uncertainties": [
+      "The beneficiary and value are not yet established."
+    ]
+  }
+}

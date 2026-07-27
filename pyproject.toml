@@ -1,0 +1,9 @@
+[project]
+name = "ideas-worth-building-tools"
+version = "0.1.0"
+description = "Dependency-free repository mechanics for Ideas Worth Building"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
