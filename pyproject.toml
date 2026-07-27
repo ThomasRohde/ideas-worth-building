@@ -7,3 +7,8 @@ dependencies = []
 
 [tool.ruff]
 line-length = 100
+
+[tool.ruff.lint]
+# Pinned explicitly; ruff's default selection changes between releases.
+# E501 is excluded deliberately: line length is a `ruff format` concern here.
+select = ["E4", "E7", "E9", "F", "I", "UP"]

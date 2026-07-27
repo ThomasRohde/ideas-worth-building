@@ -4,8 +4,8 @@ import json
 import sys
 import tempfile
 import unittest
-from unittest import mock
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
@@ -13,7 +13,6 @@ sys.path.insert(0, str(SCRIPTS))
 
 import iwb  # noqa: E402
 import validate_repository as validator  # noqa: E402
-
 
 VALID_IDEA = '''---
 schema_version: 1
