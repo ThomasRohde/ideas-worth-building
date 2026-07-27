@@ -13,11 +13,11 @@ import datetime as dt
 import json
 import re
 import sys
+from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import Any
 from urllib.parse import unquote
-
 
 REQUIRED_ROOT_FILES = (
     "README.md",
