@@ -13,3 +13,4 @@ Thumbs.db
 *.tmp
 /proposal.json
 /.iwb/
+bash.exe.stackdump
